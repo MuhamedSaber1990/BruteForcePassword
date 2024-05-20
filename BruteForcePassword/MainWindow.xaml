@@ -1,0 +1,33 @@
+﻿<Window x:Class="BruteForcePassword.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Brute Force Password Cracker" Height="250" Width="400"
+        Background="#2E2E2E" Foreground="White">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Password:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0" Background="#FFF4E8E8"/>
+        <TextBox Name="Content" Grid.Row="0" Grid.Column="1" Width="200" Margin="0,0,0,10" Padding="5"
+                 Background="#3C3C3C" Foreground="White" BorderBrush="#5A5A5A" BorderThickness="1"/>
+
+        <Label Content="Max Threads:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0" Background="#FFF4E8E8"/>
+        <Slider Name="ThreadSlider" Grid.Row="1" Grid.Column="1" Width="200" Minimum="0" Maximum="4" TickFrequency="1"
+                IsSnapToTickEnabled="True" Margin="0,0,0,10" ValueChanged="ThreadSlider_ValueChanged"/>
+        <Label Name="ThreadLabel" Content="0%" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Margin="10,0,0,0" Background="#FFF4E8E8"/>
+
+        <Button Content="Start" Grid.Row="3" Grid.Column="1" Width="100" Padding="5" Margin="0,20,0,0"
+                HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click"
+                Background="#FF5722" Foreground="White" BorderBrush="#FF5722" BorderThickness="1" />
+    </Grid>
+</Window>
